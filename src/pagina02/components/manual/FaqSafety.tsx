@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
-import { Chevron } from './icons'
+import { Chevron, WhatsApp } from './icons'
+
+const WHATSAPP_URL = 'https://wa.me/5511946128600'
 
 const faqs = [
   { q: 'Como funciona a teleconsulta?', a: 'Você preenche seus dados, nossa equipe entra em contato para agendar e a consulta acontece por vídeo no horário escolhido. Você recebe o protocolo digitalmente — sem deslocamentos, filas ou exposição.' },
@@ -53,6 +55,17 @@ export function FaqSafety() {
           são tratados com sigilo médico e conforme a LGPD.
         </p>
         <a href="/politica-de-privacidade" className="mn-faq__safety-link">Política de privacidade ›</a>
+        <a
+          href={WHATSAPP_URL}
+          id="cta-whatsapp"
+          className="mn-btn mn-btn--whats"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <WhatsApp />
+          Falar no WhatsApp
+        </a>
+        <span className="mn-faq__safety-num">+55 (11) 94612-8600</span>
       </aside>
     </section>
   )

@@ -16,6 +16,8 @@
   --mn-brown-line: rgba(70, 45, 25, 0.18);
   --mn-cream: #F5F5F4;
   --mn-on-brown: rgba(245, 245, 244, 0.78);
+  --mn-green: #2F9E44;
+  --mn-green-hover: #268A3A;
 }
 
 /* ---------- Base ---------- */
@@ -85,41 +87,44 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  padding: 16px 36px;
+  padding: 18px 40px;
   border-radius: var(--radius-pill);
-  font-family: var(--font-detail);
-  font-size: var(--text-sm);
-  font-weight: var(--weight-medium);
-  letter-spacing: var(--tracking-wider);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   transition: transform var(--duration-base) var(--ease-default),
               background-color var(--duration-base) var(--ease-default),
               box-shadow var(--duration-base) var(--ease-default);
 }
-.mn-btn:hover { transform: translateY(-1px); }
+.mn-btn:hover { transform: translateY(-2px); }
 .mn-btn:active { transform: scale(0.98); }
-.mn-btn--gold {
-  background: var(--mn-brown);
-  color: var(--mn-cream);
-}
-.mn-btn--gold:hover { background: var(--mn-brown-hover); box-shadow: 0 8px 24px rgba(70, 45, 25, 0.28); }
 
-/* Sobre fundos escuros/marrons o botão fica creme com texto marrom */
-.mn-hero .mn-btn--gold,
-.mn-results .mn-btn--gold,
-.mn-compare__col--main .mn-btn--gold,
-.mn-banner .mn-btn--gold,
-.mn-final .mn-btn--gold {
-  background: var(--mn-cream);
-  color: var(--mn-brown);
+/* CTA principal: verde de alto contraste, igual em fundo claro ou escuro */
+.mn-btn--gold {
+  background: var(--mn-green);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(47, 158, 68, 0.35);
 }
-.mn-hero .mn-btn--gold:hover,
-.mn-results .mn-btn--gold:hover,
-.mn-compare__col--main .mn-btn--gold:hover,
-.mn-banner .mn-btn--gold:hover,
-.mn-final .mn-btn--gold:hover { background: #fff; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); }
+.mn-btn--gold:hover {
+  background: var(--mn-green-hover);
+  box-shadow: 0 10px 28px rgba(47, 158, 68, 0.45);
+}
 .mn-btn--block { width: 100%; }
-.mn-btn__icon { width: 16px; height: 16px; }
+.mn-btn__icon { width: 18px; height: 18px; stroke-width: 2.2; }
+
+/* Botão de WhatsApp (secundário) */
+.mn-btn--whats {
+  background: transparent;
+  color: var(--mn-brown);
+  border: 1.5px solid var(--mn-brown);
+  padding: 14px 28px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.mn-btn--whats:hover { background: var(--mn-brown); color: var(--mn-cream); }
+.mn-btn--whats svg { width: 20px; height: 20px; }
 
 /* ---------- Top bar ---------- */
 
@@ -723,6 +728,8 @@
 .mn-faq__safety-rule { display: block; height: 1px; background: var(--mn-brown); margin-bottom: var(--space-6); }
 .mn-faq__safety h3 { font-family: var(--font-heading); font-weight: var(--weight-medium); font-size: var(--text-xl); line-height: var(--leading-snug); margin-bottom: var(--space-4); }
 .mn-faq__safety p { font-size: var(--text-sm); line-height: var(--leading-relaxed); color: var(--color-text-body); }
+.mn-faq__safety .mn-btn--whats { margin-top: var(--space-6); width: 100%; }
+.mn-faq__safety-num { display: block; margin-top: var(--space-2); text-align: center; font-size: var(--text-sm); color: var(--color-text-muted); }
 .mn-faq__safety-link { display: inline-block; margin-top: var(--space-5); font-size: var(--text-sm); font-weight: var(--weight-semibold); color: var(--mn-brown); }
 
 /* ---------- CTA final ---------- */
@@ -781,7 +788,7 @@
 }
 .mn-sticky--show { transform: translateY(0); }
 .mn-sticky__text { font-size: var(--text-sm); color: var(--color-text-body); }
-.mn-sticky__btn { flex-shrink: 0; padding: 14px 40px; }
+.mn-sticky__btn { flex-shrink: 0; padding: 16px 40px; }
 
 /* ---------- Responsivo ---------- */
 
@@ -816,5 +823,5 @@
   .mn-banner__content { padding: var(--space-6); }
   .mn-sticky__text { display: none; }
   .mn-sticky__btn { width: 100%; }
-  .mn-btn { padding: 15px 28px; }
+  .mn-btn { padding: 17px 28px; font-size: 0.875rem; }
 }
