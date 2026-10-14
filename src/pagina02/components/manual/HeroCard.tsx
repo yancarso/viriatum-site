@@ -14,7 +14,7 @@ export function HeroCard() {
   return (
     <section className="mn-hero" id="inicio" data-navbar-theme="light">
       <div className="mn-hero__card">
-        <img className="mn-hero__photo" src="/doctor-section.webp" alt="" aria-hidden="true" />
+        <img className="mn-hero__photo" src="/doctor.webp" alt="" aria-hidden="true" />
         <div className="mn-hero__shade" aria-hidden="true" />
         <div className="mn-hero__content">
           <motion.h1
