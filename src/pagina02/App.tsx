@@ -17,8 +17,8 @@ import { StickyBar } from './components/manual/StickyBar'
 import { useEffect } from 'react'
 import { forwardQuizParams } from './lib/quiz'
 
-// Cópia de trabalho da página principal, servida em /pagina02.
-// Estrutura baseada na página da Manual, com a identidade visual do Viriatum.
+// Página principal (servida em /). Estrutura baseada na página da Manual,
+// com a identidade visual do Viriatum. A home antiga fica em /pagina02 (legado.html).
 export function App() {
   useEffect(() => forwardQuizParams(), [])
 

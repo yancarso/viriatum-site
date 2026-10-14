@@ -4,6 +4,11 @@ import Lenis from 'lenis'
 import { App } from './App'
 import './styles/index.css'
 
+// A versão antiga da home agora fica em /pagina02: não indexar essa cópia.
+if (window.location.pathname.startsWith('/pagina02')) {
+  document.querySelector('meta[name="robots"]')?.setAttribute('content', 'noindex, nofollow')
+}
+
 function Root() {
   useEffect(() => {
     const lenis = new Lenis({
