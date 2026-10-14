@@ -1,5 +1,5 @@
 import { Footer } from './components/layout/Footer'
-import { Header, HeaderSwitcher, getHeaderVariant } from './components/manual/Header'
+import { Header } from './components/manual/Header'
 import { HeroCard } from './components/manual/HeroCard'
 import { TrustStats } from './components/manual/TrustStats'
 import { CostTable } from './components/manual/CostTable'
@@ -20,15 +20,11 @@ import { forwardQuizParams } from './lib/quiz'
 // Cópia de trabalho da página principal, servida em /pagina02.
 // Estrutura baseada na página da Manual, com a identidade visual do Viriatum.
 export function App() {
-  const header = getHeaderVariant()
   useEffect(() => forwardQuizParams(), [])
-  useEffect(() => {
-    document.documentElement.dataset.header = header
-  }, [header])
 
   return (
     <>
-      <Header variant={header} />
+      <Header />
       <main className="mn-page">
         <HeroCard />
         <TrustStats />
@@ -46,7 +42,6 @@ export function App() {
       </main>
       <Footer />
       <StickyBar />
-      <HeaderSwitcher variant={header} />
     </>
   )
 }
