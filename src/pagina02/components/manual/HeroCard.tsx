@@ -31,7 +31,7 @@ export function HeroCard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease }}
           >
-            Mais de 2.000 homens já começaram.
+            Mais de 4.000 homens já começaram.
           </motion.p>
           <motion.ul
             className="mn-hero__bullets"

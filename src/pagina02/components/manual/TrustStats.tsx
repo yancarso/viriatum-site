@@ -1,5 +1,5 @@
 const stats = [
-  { num: '+2.000', label: 'homens atendidos' },
+  { num: '+4.000', label: 'homens atendidos' },
   { num: '100%', label: 'online, da consulta ao acompanhamento' },
   { num: '4.9 ★', label: 'nota média de satisfação' },
 ]

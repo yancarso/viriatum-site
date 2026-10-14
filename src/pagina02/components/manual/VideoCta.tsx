@@ -1,26 +1,38 @@
-import { useRef, useState } from 'react'
 import { QUIZ_URL } from '../../lib/quiz'
+import { Check } from './icons'
 
-// Bloco de vídeo com botão de som + CTA (na Manual: "Responda nosso questionário...").
+const points = [
+  'Perguntas simples, uma por vez',
+  'Leva poucos minutos, direto do celular',
+  'Respostas 100% confidenciais',
+]
+
+// Demonstração do quiz em um celular (na Manual: "Responda nosso questionário...").
 export function VideoCta() {
-  const ref = useRef<HTMLVideoElement>(null)
-  const [muted, setMuted] = useState(true)
-
   return (
     <section className="mn-wrap mn-videocta" data-navbar-theme="light">
-      <h2 className="mn-h2 mn-center-text">Responda o questionário em poucos minutos.</h2>
-      <div className="mn-videocta__frame">
-        <video ref={ref} className="mn-videocta__video" src="/couple.mp4" autoPlay muted={muted} loop playsInline />
-        <button
-          className="mn-sound"
-          onClick={() => setMuted((m) => !m)}
-          aria-label={muted ? 'Ativar som' : 'Desativar som'}
-        >
-          {muted ? '🔇' : '🔊'}
-        </button>
-      </div>
-      <div className="mn-center">
+      <div className="mn-videocta__text">
+        <span className="mn-eyebrow">Avaliação online</span>
+        <h2 className="mn-h2">Responda o questionário em poucos minutos.</h2>
+        <ul className="mn-videocta__points">
+          {points.map((p) => <li key={p}><Check />{p}</li>)}
+        </ul>
         <a href={QUIZ_URL} id="cta-video" className="mn-btn mn-btn--gold">Começar agora</a>
+      </div>
+      <div className="mn-phone">
+        <div className="mn-phone__screen">
+          <video
+            className="mn-phone__video"
+            src="/media/quiz-demo.mp4"
+            poster="/media/quiz-demo-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-label="Demonstração do questionário de avaliação"
+          />
+        </div>
       </div>
     </section>
   )
