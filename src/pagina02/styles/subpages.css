@@ -1,0 +1,214 @@
+/* ============================================================
+   SUBPÁGINAS — Contato e Tratamentos
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   CONTATO
+---------------------------------------------------------- */
+
+.contato-page {
+  background-color: var(--color-dark);
+  color: var(--color-gold);
+  min-height: 100vh;
+}
+
+.contato-hero {
+  padding: 160px 40px 64px;
+  background-color: var(--color-dark);
+}
+
+.contato-hero__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.contato-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-medium);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-gold);
+  margin: 0;
+}
+
+.contato-hero__sub {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.65;
+  color: rgba(219, 196, 133, 0.75);
+  max-width: 560px;
+  margin: 0;
+}
+
+.contato-channels {
+  padding: 32px 40px 120px;
+  background-color: var(--color-dark);
+}
+
+.contato-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.contato-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-8) var(--space-6);
+  border: 1px solid rgba(219, 196, 133, 0.18);
+  border-radius: 12px;
+  background: rgba(219, 196, 133, 0.04);
+  text-decoration: none;
+  transition: border-color var(--duration-base) var(--ease-default),
+              background-color var(--duration-base) var(--ease-default),
+              transform var(--duration-base) var(--ease-default);
+}
+
+.contato-card:hover {
+  border-color: rgba(219, 196, 133, 0.45);
+  background: rgba(219, 196, 133, 0.07);
+  transform: translateY(-2px);
+}
+
+.contato-card__label {
+  font-family: var(--font-detail);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: rgba(219, 196, 133, 0.55);
+}
+
+.contato-card__value {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  color: var(--color-gold);
+  letter-spacing: -0.01em;
+}
+
+.contato-card__hint {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: rgba(219, 196, 133, 0.55);
+}
+
+.contato-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(219, 196, 133, 0.12);
+}
+
+.contato-meta__block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.contato-meta__label {
+  font-family: var(--font-detail);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: rgba(219, 196, 133, 0.55);
+}
+
+.contato-meta__block p {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: rgba(219, 196, 133, 0.85);
+  margin: 0;
+}
+
+.contato-back {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .contato-hero { padding: 120px 24px 32px; }
+  .contato-hero__title { font-size: var(--text-2xl); }
+  .contato-channels { padding: 24px 24px 80px; }
+  .contato-grid { grid-template-columns: 1fr; }
+  .contato-meta { grid-template-columns: 1fr; gap: var(--space-6); }
+}
+
+/* ----------------------------------------------------------
+   TRATAMENTOS — placeholder
+---------------------------------------------------------- */
+
+.tratamentos-page {
+  background-color: var(--color-dark);
+  color: var(--color-gold);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.tratamentos-hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 40px 120px;
+  background-color: var(--color-dark);
+}
+
+.tratamentos-hero__inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.tratamentos-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-medium);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-gold);
+  margin: 0;
+}
+
+.tratamentos-hero__sub {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.65;
+  color: rgba(219, 196, 133, 0.75);
+  max-width: 480px;
+  margin: 0;
+}
+
+.tratamentos-hero__actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .tratamentos-hero { padding: 120px 24px 80px; }
+  .tratamentos-hero__title { font-size: var(--text-3xl); }
+}

@@ -10,6 +10,17 @@
       "source": "/tratamentos/:path*",
       "destination": "https://viriatum-quizz-produto.vercel.app/tratamentos/:path*"
     },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/pagina02",
+      "destination": "/pagina02.html"
+    },
+    {
+      "source": "/pagina02/:path*",
+      "destination": "/pagina02.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
