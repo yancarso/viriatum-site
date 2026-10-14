@@ -10,7 +10,7 @@ const points = [
 // Demonstração do quiz em um celular (na Manual: "Responda nosso questionário...").
 export function VideoCta() {
   return (
-    <section className="mn-wrap mn-videocta" data-navbar-theme="light">
+    <section className="mn-wrap mn-videocta mn-band-2" data-navbar-theme="light">
       <div className="mn-videocta__text">
         <span className="mn-eyebrow">Avaliação online</span>
         <h2 className="mn-h2">Responda o questionário em poucos minutos.</h2>
@@ -23,8 +23,8 @@ export function VideoCta() {
         <div className="mn-phone__screen">
           <video
             className="mn-phone__video"
-            src="/media/quiz-demo.mp4"
-            poster="/media/quiz-demo-poster.jpg"
+            src="/media/quiz-demo-v2.mp4"
+            poster="/media/quiz-demo-poster-v2.jpg"
             autoPlay
             muted
             loop

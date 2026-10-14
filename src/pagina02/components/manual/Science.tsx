@@ -10,7 +10,7 @@ const steps = [
 
 export function Science() {
   return (
-    <section className="mn-wrap mn-science" data-navbar-theme="light">
+    <section className="mn-wrap mn-science mn-band-2" data-navbar-theme="light">
       <AnimatedSection>
         <span className="mn-eyebrow">A ciência por trás</span>
         <h2 className="mn-h2">Disfunção erétil não é fraqueza. É fisiologia.</h2>

@@ -23,7 +23,7 @@ export function HeroCard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease }}
           >
-            E se você pudesse voltar a <em>confiar</em> no seu desempenho?
+            Falta de ereção tem <em>solução</em> se tratada corretamente.
           </motion.h1>
           <motion.p
             className="mn-hero__lead"

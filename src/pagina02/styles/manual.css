@@ -343,7 +343,7 @@
 }
 .mn-hero__content {
   position: relative;
-  max-width: 680px;
+  max-width: 780px;
   padding: var(--space-16) var(--space-6) var(--space-16) clamp(24px, 8vw, 144px);
 }
 .mn-hero__title {
@@ -989,7 +989,8 @@
 
 @media (max-width: 768px) {
   .mn-hero { padding: calc(var(--mn-head) + 8px) 8px 0; }
-  .mn-hero__card { min-height: 760px; align-items: flex-end; }
+  .mn-hero__card { min-height: 800px; align-items: flex-end; }
+  .mn-hero__title { font-size: 2.25rem; }
   .mn-hero__photo {
     width: 100%;
     height: 50%;
@@ -1020,3 +1021,149 @@
 
 /* Âncoras do menu não ficam escondidas atrás do cabeçalho fixo */
 .mn-page section[id] { scroll-margin-top: calc(var(--mn-head) + 16px); }
+
+/* ============================================================
+   TEMA ESCURO — segue o visual da página principal
+   (fundos #141008/#1C180D, títulos dourados, faixa sálvia)
+   ============================================================ */
+
+.mn-page {
+  --mn-bg: #141008;
+  --mn-bg-2: #1C180D;
+  --mn-gold: #DBC485;
+  --mn-text: rgba(232, 230, 227, 0.78);
+  --mn-muted: rgba(232, 230, 227, 0.5);
+  --mn-card: rgba(219, 196, 133, 0.04);
+  --mn-line: rgba(219, 196, 133, 0.14);
+  --mn-sage: #DCDEAD;
+  --mn-bad: #D98B7A;
+  background: var(--mn-bg);
+  color: var(--mn-text);
+}
+body:has(.mn-page) { background: #141008; }
+
+/* Faixa de fundo de largura total para seções dentro do container */
+.mn-band-2, .mn-band-sage {
+  position: relative;
+  clip-path: inset(0 -100vmax);
+}
+.mn-band-2 { box-shadow: 0 0 0 100vmax var(--mn-bg-2); background: var(--mn-bg-2); }
+.mn-band-sage { box-shadow: 0 0 0 100vmax var(--mn-sage); background: var(--mn-sage); }
+.mn-page .mn-band-2, .mn-page .mn-band-sage { padding-bottom: var(--space-20); margin-top: var(--space-20); padding-top: var(--space-20); }
+
+/* Tipografia */
+.mn-page .mn-h2, .mn-page .mn-display { color: var(--mn-gold); }
+.mn-page .mn-sub { color: var(--mn-text); }
+.mn-page .mn-eyebrow { color: rgba(219, 196, 133, 0.6); }
+.mn-page .mn-fine { color: var(--mn-muted); }
+
+/* Hero */
+.mn-page .mn-hero__card { box-shadow: 0 0 0 1px var(--mn-line); }
+
+/* Números */
+.mn-page .mn-stats__card { background: var(--mn-card); border-color: var(--mn-line); }
+.mn-page .mn-stats__item + .mn-stats__item { border-color: var(--mn-line); }
+.mn-page .mn-stats__num { color: var(--mn-gold); }
+.mn-page .mn-stats__label { color: var(--mn-muted); }
+
+/* Tabela */
+.mn-page .mn-cost__table { background: var(--mn-card); border-color: var(--mn-line); }
+.mn-page .mn-cost__row + .mn-cost__row { border-color: var(--mn-line); }
+.mn-page .mn-cost__row--head { background: #2C2311; color: var(--mn-muted); }
+.mn-page .mn-cost__brand { color: var(--mn-gold); }
+.mn-page .mn-cost__label { color: rgba(232, 230, 227, 0.9); }
+.mn-page .mn-cost__cell { border-color: var(--mn-line); }
+.mn-page .mn-cost__cell--bad { color: var(--mn-bad); }
+.mn-page .mn-cost__cell--good { background: rgba(219, 196, 133, 0.07); color: var(--mn-gold); }
+.mn-page .mn-cost__cell--good svg { color: var(--mn-gold); }
+
+/* Depoimentos */
+.mn-page .mn-results__panel { box-shadow: 0 0 0 1px var(--mn-line); }
+.mn-page .mn-h2--gold { color: var(--mn-gold); }
+
+/* Como funciona — faixa sálvia (como "Preencha seus dados" na principal) */
+.mn-page .mn-how .mn-h2, .mn-page .mn-how .mn-display, .mn-page .mn-how__right-title { color: #1C180D; }
+.mn-page .mn-how .mn-sub { color: rgba(28, 24, 13, 0.72); }
+.mn-page .mn-how .mn-eyebrow { color: rgba(28, 24, 13, 0.55); }
+.mn-page .mn-how__label { color: #1C180D; }
+.mn-page .mn-how__icon { background: #1C180D; color: var(--mn-gold); }
+.mn-page .mn-how__chev { color: rgba(28, 24, 13, 0.35); }
+.mn-page .mn-timeline { background: #1C180D; }
+.mn-page .mn-timeline__phase strong, .mn-page .mn-timeline__bar strong { color: var(--mn-gold); }
+.mn-page .mn-timeline__range { accent-color: var(--mn-gold); }
+
+/* Vídeo do quiz */
+.mn-page .mn-videocta__points { color: var(--mn-text); }
+.mn-page .mn-phone { box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--mn-line); }
+
+/* Comparativo */
+.mn-page .mn-compare__col { background: var(--mn-card); border: 1px solid var(--mn-line); color: var(--mn-text); }
+.mn-page .mn-compare__title { color: var(--mn-gold); }
+.mn-page .mn-compare__kicker { color: var(--mn-muted); }
+.mn-page .mn-compare__list .is-no svg { color: var(--mn-bad); }
+.mn-page .mn-compare__list .is-ok svg { color: var(--mn-gold); }
+.mn-page .mn-compare__col--main { background: #2C2311; border-color: rgba(219, 196, 133, 0.35); box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); }
+.mn-page .mn-compare__badge { background: var(--mn-gold); color: #1C180D; }
+.mn-page .mn-compare__logo { filter: none; }
+.mn-page .mn-compare__col--main .mn-compare__list .is-ok svg { color: var(--mn-gold); }
+
+/* Banner */
+.mn-page .mn-banner__title { color: var(--mn-gold); }
+.mn-page .mn-banner__card { box-shadow: 0 0 0 1px var(--mn-line); }
+
+/* Evidências */
+.mn-page .mn-evidence__intro { background: var(--mn-card); border: 1px solid var(--mn-line); color: var(--mn-gold); }
+.mn-page .mn-evidence__card { background: #2C2311; border: 1px solid var(--mn-line); }
+.mn-page .mn-evidence__big { background-image: linear-gradient(180deg, #EBD9A6 0%, #A88B4E 100%); }
+.mn-page .mn-evidence__text { color: var(--mn-text); border-color: var(--mn-line); }
+
+/* Ciência */
+.mn-page .mn-science__panel { background: var(--mn-card); border: 1px solid var(--mn-line); }
+.mn-page .mn-science__step { border-color: var(--mn-line); }
+.mn-page .mn-science__step strong, .mn-page .mn-science__icon svg { color: var(--mn-gold); }
+.mn-page .mn-science__rule { background: rgba(219, 196, 133, 0.5); }
+
+/* Sobre / planos */
+.mn-page .mn-about__plans-title { color: rgba(232, 230, 227, 0.9); }
+.mn-page .mn-plan { background: var(--mn-card); border-color: var(--mn-line); }
+.mn-page .mn-plan__title { color: var(--mn-gold); }
+.mn-page .mn-plan__desc { color: var(--mn-text); }
+.mn-page .mn-plan__inc { color: var(--mn-muted); }
+.mn-page .mn-plan__list { color: rgba(232, 230, 227, 0.85); }
+.mn-page .mn-plan__list svg, .mn-page .mn-plan__link { color: var(--mn-gold); }
+.mn-page .mn-plan__badge { background: #2C2311; color: var(--mn-gold); border: 1px solid var(--mn-line); }
+
+/* FAQ */
+.mn-page .mn-faq__item { border-color: var(--mn-line); }
+.mn-page .mn-faq__q { color: rgba(232, 230, 227, 0.92); }
+.mn-page .mn-faq__a { color: var(--mn-text); }
+.mn-page .mn-faq__safety { background: #2C2311; border: 1px solid var(--mn-line); }
+.mn-page .mn-faq__safety h3 { color: var(--mn-gold); }
+.mn-page .mn-faq__safety p { color: var(--mn-text); }
+.mn-page .mn-faq__safety-rule { background: var(--mn-gold); opacity: 0.5; }
+.mn-page .mn-faq__safety-link { color: var(--mn-gold); }
+.mn-page .mn-faq__safety-num { color: var(--mn-muted); }
+.mn-page .mn-btn--whats { color: var(--mn-gold); border-color: rgba(219, 196, 133, 0.6); }
+.mn-page .mn-btn--whats:hover { background: var(--mn-gold); color: #1C180D; }
+
+/* CTA final */
+.mn-page .mn-final__card { box-shadow: 0 0 0 1px var(--mn-line); }
+.mn-page .mn-final__title { color: var(--mn-gold); }
+
+/* Barra fixa */
+.mn-sticky { background: rgba(20, 16, 8, 0.92); border-top-color: rgba(219, 196, 133, 0.14); }
+.mn-sticky__text { color: rgba(232, 230, 227, 0.72); }
+
+/* Cabeçalhos A e B no tema escuro */
+.mn-head--a { background: #1C180D; border-bottom: 1px solid rgba(219, 196, 133, 0.08); }
+.mn-head--a .mn-head__logo, .mn-head--b .mn-head__logo { filter: none; }
+.mn-head--a .mn-head__link, .mn-head--b .mn-head__link { color: var(--color-gold); opacity: 0.75; }
+.mn-head--a .mn-head__link:hover, .mn-head--b .mn-head__link:hover { opacity: 1; }
+.mn-head__announce { background: #2C2311; color: rgba(232, 230, 227, 0.85); border-bottom: 1px solid rgba(219, 196, 133, 0.1); }
+.mn-head__announce strong { color: var(--color-gold); }
+.mn-head__pill { background: rgba(28, 24, 13, 0.72); border-color: rgba(219, 196, 133, 0.16); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35); }
+.mn-head--b.is-scrolled .mn-head__pill { background: rgba(28, 24, 13, 0.92); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45); }
+.mn-head__trust { color: var(--color-gold); }
+.mn-head--c .mn-head__logo--light { filter: none; }
+.mn-head--c .mn-head__link { color: var(--color-gold); }
+.mn-head__strip { background: #2C2311; }

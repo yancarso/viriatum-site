@@ -21,7 +21,7 @@ export function HowTimeline() {
   const p = phases[i]
 
   return (
-    <section className="mn-wrap mn-how" id="como-funciona" data-navbar-theme="light">
+    <section className="mn-wrap mn-how mn-band-sage" id="como-funciona" data-navbar-theme="light">
       <AnimatedSection className="mn-how__left" direction="left">
         <span className="mn-eyebrow">Como funciona</span>
         <h2 className="mn-display">Simples, discreto e online</h2>

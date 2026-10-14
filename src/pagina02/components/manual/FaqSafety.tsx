@@ -40,7 +40,7 @@ function Item({ n, q, a }: { n: number; q: string; a: string }) {
 
 export function FaqSafety() {
   return (
-    <section className="mn-wrap mn-faq" id="duvidas" data-navbar-theme="light">
+    <section className="mn-wrap mn-faq mn-band-2" id="duvidas" data-navbar-theme="light">
       <div className="mn-faq__left">
         <span className="mn-eyebrow">Perguntas frequentes</span>
         <h2 className="mn-h2">Ficou alguma dúvida?</h2>
