@@ -1,34 +1,47 @@
 import { Navbar } from './components/layout/Navbar'
 import { Footer } from './components/layout/Footer'
-import { Hero } from './components/sections/Hero'
-import { StatsBar } from './components/sections/StatsBar'
-import { PainPoints } from './components/sections/PainPoints'
-import { HowItWorks } from './components/sections/HowItWorks'
-import { Services } from './components/sections/Services'
-import { Doctor } from './components/sections/Doctor'
-import { Testimonials } from './components/sections/Testimonials'
-import { LeadForm } from './components/sections/LeadForm'
-import { FAQ } from './components/sections/FAQ'
+import { TopBar } from './components/manual/TopBar'
+import { HeroCard } from './components/manual/HeroCard'
+import { TrustStats } from './components/manual/TrustStats'
+import { CostTable } from './components/manual/CostTable'
+import { ResultsCarousel } from './components/manual/ResultsCarousel'
+import { HowTimeline } from './components/manual/HowTimeline'
+import { VideoCta } from './components/manual/VideoCta'
+import { Compare } from './components/manual/Compare'
+import { BannerCta } from './components/manual/BannerCta'
+import { Evidence } from './components/manual/Evidence'
+import { Science } from './components/manual/Science'
+import { About } from './components/manual/About'
+import { FaqSafety } from './components/manual/FaqSafety'
+import { FinalCta } from './components/manual/FinalCta'
+import { StickyBar } from './components/manual/StickyBar'
+import { LeadModal } from './components/manual/LeadModal'
 
 // Cópia de trabalho da página principal, servida em /pagina02.
+// Estrutura baseada na página da Manual, com a identidade visual do Viriatum.
 export function App() {
   return (
     <>
       <Navbar />
-      <main>
-        <div className="hero-wrapper">
-          <Hero />
-          <StatsBar />
-        </div>
-        <PainPoints />
-        <HowItWorks />
-        <Services />
-        <Doctor />
-        <Testimonials />
-        <LeadForm />
-        <FAQ />
+      <TopBar />
+      <main className="mn-page">
+        <HeroCard />
+        <TrustStats />
+        <CostTable />
+        <ResultsCarousel />
+        <HowTimeline />
+        <VideoCta />
+        <Compare />
+        <BannerCta />
+        <Evidence />
+        <Science />
+        <About />
+        <FaqSafety />
+        <FinalCta />
       </main>
       <Footer />
+      <StickyBar />
+      <LeadModal />
     </>
   )
 }
