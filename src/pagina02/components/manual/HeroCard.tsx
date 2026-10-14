@@ -8,11 +8,15 @@ const bullets = [
   'Acompanhamento contínuo e total discrição',
 ]
 
+// Prévia da versão compacta no celular (botão na primeira dobra): ?hero=compacto
+const bulletsShort = ['Médico especialista, 100% online', 'Tratamento individualizado', 'Sigilo total']
+const compact = new URLSearchParams(window.location.search).get('hero') === 'compacto'
+
 const ease = [0.25, 0.1, 0.25, 1] as const
 
 export function HeroCard() {
   return (
-    <section className="mn-hero" id="inicio" data-navbar-theme="light">
+    <section className={`mn-hero${compact ? ' mn-hero--compact' : ''}`} id="inicio" data-navbar-theme="light">
       <div className="mn-hero__card">
         <img className="mn-hero__photo" src="/doctor.webp" alt="" aria-hidden="true" />
         <div className="mn-hero__shade" aria-hidden="true" />
@@ -39,8 +43,11 @@ export function HeroCard() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease }}
           >
-            {bullets.map((b) => (
-              <li key={b}><Check className="mn-hero__check" />{b}</li>
+            {bullets.map((b, i) => (
+              <li key={b}>
+                <Check className="mn-hero__check" />
+                {compact ? <><span className="mn-hero__long">{b}</span><span className="mn-hero__short">{bulletsShort[i]}</span></> : b}
+              </li>
             ))}
           </motion.ul>
           <motion.a

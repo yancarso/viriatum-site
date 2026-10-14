@@ -1064,3 +1064,19 @@ body:has(.mn-page) { background: #141008; }
 .mn-head__pill { background: rgba(28, 24, 13, 0.72); border-color: rgba(219, 196, 133, 0.16); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35); }
 .mn-head--b.is-scrolled .mn-head__pill { background: rgba(28, 24, 13, 0.92); box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45); }
 .mn-head__trust { color: var(--color-gold); }
+
+/* ---------- Prévia: hero compacto no celular (?hero=compacto) ---------- */
+.mn-hero__short { display: none; }
+@media (max-width: 640px) {
+  .mn-hero--compact .mn-hero__long { display: none; }
+  .mn-hero--compact .mn-hero__short { display: inline; }
+  .mn-hero--compact .mn-hero__card { min-height: 0; }
+  .mn-hero--compact .mn-hero__photo { height: 270px; object-position: 52% 8%; }
+  .mn-hero--compact .mn-hero__shade { background: linear-gradient(180deg, rgba(28,21,10,0) 90px, rgba(28,21,10,0.75) 210px, rgba(28,21,10,0.95) 300px); }
+  .mn-hero--compact .mn-hero__content { padding: 200px var(--space-5) var(--space-6); }
+  .mn-hero--compact .mn-hero__title { font-size: 2rem; line-height: 1.06; }
+  .mn-hero--compact .mn-hero__lead { margin-top: var(--space-3); font-size: 1.0625rem; }
+  .mn-hero--compact .mn-hero__bullets { margin: var(--space-3) 0 var(--space-5); gap: var(--space-2); font-size: 0.9375rem; }
+  .mn-hero--compact .mn-hero__check { width: 18px; height: 18px; }
+  .mn-hero--compact .mn-btn { padding: 18px 24px; }
+}
