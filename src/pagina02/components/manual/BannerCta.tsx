@@ -3,7 +3,7 @@ export function BannerCta() {
   return (
     <section className="mn-wrap mn-banner" data-navbar-theme="light">
       <div className="mn-banner__card">
-        <img className="mn-banner__img" src="/lf-image-card.webp" alt="" aria-hidden="true" />
+        <img className="mn-banner__img" src="/media/banner-casal.webp" alt="" aria-hidden="true" />
         <div className="mn-banner__shade" aria-hidden="true" />
         <div className="mn-banner__content">
           <h2 className="mn-banner__title">A disfunção erétil tem tratamento.<br />Dê o primeiro passo.</h2>
