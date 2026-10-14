@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
+import { QUIZ_URL } from '../../lib/quiz'
 
 const NAV_ITEMS = [
   { href: '/', label: 'Início' },
@@ -66,7 +67,7 @@ export function Navbar({ hideCta = false }: { hideCta?: boolean } = {}) {
 
       {!hideCta && (
         <div className="navbar__actions">
-          <a id="nav-cta-triagem" href="#triagem" className="navbar__btn">
+          <a id="nav-cta-triagem" href={QUIZ_URL} className="navbar__btn">
             INICIAR TRIAGEM
           </a>
         </div>

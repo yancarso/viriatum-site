@@ -15,11 +15,14 @@ import { About } from './components/manual/About'
 import { FaqSafety } from './components/manual/FaqSafety'
 import { FinalCta } from './components/manual/FinalCta'
 import { StickyBar } from './components/manual/StickyBar'
-import { LeadModal } from './components/manual/LeadModal'
+import { useEffect } from 'react'
+import { forwardQuizParams } from './lib/quiz'
 
 // Cópia de trabalho da página principal, servida em /pagina02.
 // Estrutura baseada na página da Manual, com a identidade visual do Viriatum.
 export function App() {
+  useEffect(() => forwardQuizParams(), [])
+
   return (
     <>
       <Navbar />
@@ -41,7 +44,6 @@ export function App() {
       </main>
       <Footer />
       <StickyBar />
-      <LeadModal />
     </>
   )
 }

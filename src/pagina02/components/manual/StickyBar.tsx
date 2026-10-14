@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { QUIZ_URL } from '../../lib/quiz'
 
 // Barra fixa no rodapé da tela, aparece depois que o hero sai de vista.
 export function StickyBar() {
@@ -14,7 +15,7 @@ export function StickyBar() {
   return (
     <div className={`mn-sticky${show ? ' mn-sticky--show' : ''}`}>
       <p className="mn-sticky__text">Trate a disfunção erétil com médico especialista, 100% online e com total discrição.</p>
-      <a href="#triagem" id="cta-sticky" className="mn-btn mn-btn--gold mn-sticky__btn">Começar avaliação</a>
+      <a href={QUIZ_URL} id="cta-sticky" className="mn-btn mn-btn--gold mn-sticky__btn">Começar avaliação</a>
     </div>
   )
 }

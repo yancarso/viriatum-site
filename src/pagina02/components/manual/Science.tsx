@@ -1,5 +1,6 @@
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { Heart, Pulse, Search } from './icons'
+import { QUIZ_URL } from '../../lib/quiz'
 
 const steps = [
   { icon: <Pulse />, title: 'Fluxo comprometido', text: 'Vasos, hormônios ou ansiedade' },
@@ -32,7 +33,7 @@ export function Science() {
 
       <p className="mn-sub mn-center-text">Quanto mais cedo você trata, mais simples tende a ser o caminho.</p>
       <div className="mn-center">
-        <a href="#triagem" id="cta-ciencia" className="mn-btn mn-btn--gold">Quero começar meu tratamento</a>
+        <a href={QUIZ_URL} id="cta-ciencia" className="mn-btn mn-btn--gold">Quero começar meu tratamento</a>
       </div>
     </section>
   )

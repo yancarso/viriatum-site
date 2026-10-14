@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { Arrow } from './icons'
+import { QUIZ_URL } from '../../lib/quiz'
 
 const testimonials = [
   { tag: 'Protocolo individual', quote: 'Havia tentado outras abordagens sem resultado. Aqui recebi uma avaliação séria e um plano que faz sentido para o meu caso, sem promessas exageradas.', name: 'M.R., 42 anos' },
@@ -44,7 +45,7 @@ export function ResultsCarousel() {
 
         <div className="mn-results__bottom">
           <p className="mn-fine mn-fine--light">Os resultados são individuais e podem variar de acordo com cada organismo.</p>
-          <a href="#triagem" id="cta-depoimentos" className="mn-btn mn-btn--gold">Quero recuperar minha confiança</a>
+          <a href={QUIZ_URL} id="cta-depoimentos" className="mn-btn mn-btn--gold">Quero recuperar minha confiança</a>
         </div>
       </div>
     </section>

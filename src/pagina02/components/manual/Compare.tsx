@@ -1,5 +1,6 @@
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { Check, Cross } from './icons'
+import { QUIZ_URL } from '../../lib/quiz'
 
 type Item = { ok: boolean; text: string }
 
@@ -55,7 +56,7 @@ export function Compare() {
         <img src="/logo-horizontal.svg" alt="Instituto Viriatum" className="mn-compare__logo" />
         <span className="mn-compare__kicker mn-compare__kicker--gold">sem sair de casa</span>
         <List items={viriatum} />
-        <a href="#triagem" id="cta-comparativo" className="mn-btn mn-btn--gold mn-btn--block">Iniciar minha avaliação</a>
+        <a href={QUIZ_URL} id="cta-comparativo" className="mn-btn mn-btn--gold mn-btn--block">Iniciar minha avaliação</a>
       </AnimatedSection>
 
       <AnimatedSection className="mn-compare__col" delay={0.2}>

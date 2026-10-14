@@ -1,5 +1,6 @@
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { Arrow, Check, Stethoscope, Box } from './icons'
+import { QUIZ_URL } from '../../lib/quiz'
 
 const included = [
   'Consulta online com médico especialista',
@@ -31,7 +32,7 @@ export function About() {
           <ul className="mn-plan__list">
             {included.map((i) => <li key={i}><Check />{i}</li>)}
           </ul>
-          <a href="#triagem" id="cta-plano" className="mn-btn mn-btn--gold">Iniciar avaliação</a>
+          <a href={QUIZ_URL} id="cta-plano" className="mn-btn mn-btn--gold">Iniciar avaliação</a>
         </div>
       </AnimatedSection>
 

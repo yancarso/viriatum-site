@@ -1,4 +1,5 @@
 import { AnimatedSection } from '../ui/AnimatedSection'
+import { QUIZ_URL } from '../../lib/quiz'
 
 export function Evidence() {
   return (
@@ -22,7 +23,7 @@ export function Evidence() {
       </div>
 
       <div className="mn-center">
-        <a href="#triagem" id="cta-evidencias" className="mn-btn mn-btn--gold">Começar meu tratamento</a>
+        <a href={QUIZ_URL} id="cta-evidencias" className="mn-btn mn-btn--gold">Começar meu tratamento</a>
       </div>
       <p className="mn-fine mn-center-text">
         ¹ Feldman HA, et al. Impotence and its medical and psychosocial correlates: results of the Massachusetts Male Aging Study. J Urol. 1994;151(1):54-61.

@@ -10,7 +10,7 @@ const steps = [
 ]
 
 const phases = [
-  { tag: 'Primeiro contato', title: 'Triagem', text: 'Você deixa seus dados e nossa equipe entra em contato pelo WhatsApp para entender seu caso e agendar a consulta.' },
+  { tag: 'Primeiro contato', title: 'Triagem', text: 'Você responde um questionário rápido e sigiloso sobre seus sintomas e histórico. Leva poucos minutos.' },
   { tag: 'Semana 1', title: 'Consulta', text: 'Avaliação online com o médico: histórico, possíveis causas e, se necessário, pedido de exames. Sem julgamentos.' },
   { tag: 'Primeiras semanas', title: 'Início do protocolo', text: 'O tratamento é individualizado e começa de forma gradual. O médico acompanha como seu corpo responde.' },
   { tag: 'Mês 2 em diante', title: 'Ajustes e evolução', text: 'Com base no seu retorno, o protocolo é ajustado. O objetivo é resultado consistente, não um efeito pontual.' },
@@ -25,7 +25,7 @@ export function HowTimeline() {
       <AnimatedSection className="mn-how__left" direction="left">
         <span className="mn-eyebrow">Como funciona</span>
         <h2 className="mn-display">Simples, discreto e online</h2>
-        <p className="mn-sub">Preencha um formulário rápido — nossa equipe cuida de todo o resto, sem você sair de casa.</p>
+        <p className="mn-sub">Responda um questionário rápido sobre o seu caso — nossa equipe cuida de todo o resto, sem você sair de casa.</p>
         <ol className="mn-how__steps">
           {steps.map((s, idx) => (
             <li key={s.label} className="mn-how__step">

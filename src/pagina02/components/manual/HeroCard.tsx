@@ -1,5 +1,6 @@
 import { motion } from 'motion/react'
 import { Check } from './icons'
+import { QUIZ_URL } from '../../lib/quiz'
 
 const bullets = [
   'Consulta com médico especialista, sem sair de casa',
@@ -43,7 +44,7 @@ export function HeroCard() {
             ))}
           </motion.ul>
           <motion.a
-            href="#triagem"
+            href={QUIZ_URL}
             id="cta-hero"
             className="mn-btn mn-btn--gold"
             initial={{ opacity: 0, y: 16 }}

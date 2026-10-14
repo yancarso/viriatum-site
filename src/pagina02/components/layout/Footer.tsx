@@ -1,3 +1,4 @@
+import { QUIZ_URL } from '../../lib/quiz'
 export function Footer() {
   return (
     <footer className="footer">
@@ -9,7 +10,7 @@ export function Footer() {
           <ul className="footer__links">
             <li><a id="footer-link-como-funciona" href="#como-funciona" className="footer__link">Como funciona</a></li>
             <li><a id="footer-link-tratamentos" href="/tratamentos" className="footer__link">Tratamentos</a></li>
-            <li><a id="footer-link-triagem" href="#triagem" className="footer__link">Triagem</a></li>
+            <li><a id="footer-link-triagem" href={QUIZ_URL} className="footer__link">Triagem</a></li>
             <li><a id="footer-link-faq" href="#duvidas" className="footer__link">FAQ</a></li>
           </ul>
         </div>

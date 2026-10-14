@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react'
 import { AnimatedSection } from '../ui/AnimatedSection'
 import { Check, Heart, Pulse, Search, Shield, TrendDown, TrendUp } from './icons'
+import { QUIZ_URL } from '../../lib/quiz'
 
 type Row = {
   label: string
@@ -39,7 +40,7 @@ export function CostTable() {
       </AnimatedSection>
 
       <div className="mn-center">
-        <a href="#triagem" id="cta-custo" className="mn-btn mn-btn--gold">Iniciar agora <Check className="mn-btn__icon" /></a>
+        <a href={QUIZ_URL} id="cta-custo" className="mn-btn mn-btn--gold">Iniciar agora <Check className="mn-btn__icon" /></a>
       </div>
     </section>
   )
